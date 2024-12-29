@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h2 {
+    @apply text-[25px] font-medium italic font-gambetta tracking-[-0.02em] leading-snug;
+  }
+  h3 {
+    @apply text-[25px] font-normal font-gambetta tracking-[-0.02em] leading-snug;
+  }
+  p {
+    @apply text-[17px] font-[350] font-switzer tracking-[-0.01em];
+  }
+}
+
+@layer components {
+  .emphasis {
+    @apply font-medium italic;
+  }
+  .button {
+    @apply text-[17px] font-[350] font-switzer tracking-[-0.01em] leading-none;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --border: rgba(0, 1, 17, 0.08);
+  --border-hover: rgba(0, 1, 17, 0.16);
 }
 
-@media (prefers-color-scheme: dark) {
+/* disable dark mode */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }

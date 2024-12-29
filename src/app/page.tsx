@@ -1,101 +1,81 @@
-import Image from "next/image";
+import Button from '@/components/Button';
+import ProjectCard from '@/components/ProjectCard';
+
+const projects = [
+  {
+    title: 'Nori',
+    description: 'A comprehensive design system for enterprise applications',
+    imageUrl: '/nori.png',
+  },
+  {
+    title: 'Roomadillo',
+    description: 'Patient management system with intuitive interface',
+    imageUrl: '/nori.png',
+  },
+  {
+    title: 'Konrad Group',
+    description: 'Complete redesign of an e-commerce platform',
+    imageUrl: '/nori.png',
+  },
+  {
+    title: 'Adobe',
+    description: 'Data visualization dashboard for financial analytics',
+    imageUrl: '/nori.png',
+  },
+  {
+    title: 'Nexus',
+    description: 'Interactive learning platform for students',
+    imageUrl: '/nori.png',
+  },
+  {
+    title: 'Global Design',
+    description: 'Modern social media application',
+    imageUrl: '/nori.png',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="w-full">
+      <nav className="w-full flex flex-row py-5 border-b border-b-[var(--border)]">
+        <div className="w-full flex flex-row justify-between max-w-screen-2xl mx-auto px-[60px]">
+          <div className="flex flex-row gap-8">
+            <Button>Eric Dai</Button>
+            <Button>Work</Button>
+            <Button>About</Button>
+            <Button>Contact</Button>
+          </div>
         </div>
+      </nav>
+      <main className="flex max-w-screen-2xl mx-auto flex-col gap-8 row-start-2 items-center sm:items-start px-[60px]">
+        <div className="flex flex-col text-left max-w-[640px] leading-normal gap-6 py-[80px]">
+          <h3>
+            I create <span className="emphasis">tools for thought</span> - interfaces that amplify
+            human understanding and creative expression. I am a candidate for MSE in Computer
+            Science at the <span className="emphasis">University of Pennsylvania</span>.
+          </h3>
+          <h3>
+            I help others design and build UI under my studio <span className="emphasis">Ren</span>.
+            Previously, I prototyped software at <span className="emphasis">Konrad Group</span>, and
+            devised strategy at <span className="emphasis">Adobe</span>.
+          </h3>
+        </div>
+
+        <section className="w-full py-[40px]">
+          <h2 className="text-2xl font-medium mb-8">Selected Work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                imageUrl={project.imageUrl}
+              />
+            ))}
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
   );
 }
