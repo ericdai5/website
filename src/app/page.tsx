@@ -37,8 +37,8 @@ const projects = [
 export default function Home() {
   return (
     <div className="w-full">
-      <nav className="w-full flex flex-row py-5 border-b border-b-[var(--border)]">
-        <div className="w-full flex flex-row justify-between max-w-screen-2xl mx-auto px-[60px]">
+      <nav className="flex w-full flex-row border-b border-b-[var(--border)] py-5">
+        <div className="mx-auto flex w-full max-w-screen-2xl flex-row justify-between px-[60px]">
           <div className="flex flex-row gap-8">
             <Button>Eric Dai</Button>
             <Button>Work</Button>
@@ -47,8 +47,8 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <main className="flex max-w-screen-2xl mx-auto flex-col gap-8 row-start-2 items-center sm:items-start px-[60px]">
-        <div className="flex flex-col text-left max-w-[640px] leading-normal gap-6 py-[80px]">
+      <main className="row-start-2 mx-auto flex max-w-screen-2xl flex-col items-center gap-8 px-[60px] sm:items-start">
+        <div className="flex max-w-[640px] flex-col gap-6 py-[80px] text-left leading-normal">
           <h3>
             I create <span className="emphasis">tools for thought</span> - interfaces that amplify
             human understanding and creative expression. I am a candidate for MSE in Computer
@@ -62,8 +62,8 @@ export default function Home() {
         </div>
 
         <section className="w-full py-[40px]">
-          <h2 className="text-2xl font-medium mb-8">Selected Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="mb-8 text-2xl font-medium">Selected Work</h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <ProjectCard
                 key={project.title}
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
     </div>
   );
 }
