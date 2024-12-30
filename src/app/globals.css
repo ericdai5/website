@@ -4,13 +4,13 @@
 
 @layer base {
   h2 {
-    @apply text-[25px] font-medium italic font-gambetta tracking-[-0.02em] leading-snug;
+    @apply font-gambetta text-[25px] font-medium italic leading-snug tracking-[-0.02em];
   }
   h3 {
-    @apply text-[25px] font-normal font-gambetta tracking-[-0.02em] leading-snug;
+    @apply font-gambetta text-[25px] font-normal leading-snug tracking-[-0.02em];
   }
   p {
-    @apply text-[17px] font-[350] font-switzer tracking-[-0.01em];
+    @apply font-switzer text-[17px] font-[350] tracking-[-0.01em];
   }
 }
 
@@ -19,15 +19,18 @@
     @apply font-medium italic;
   }
   .button {
-    @apply text-[17px] font-[350] font-switzer tracking-[-0.01em] leading-none;
+    @apply font-switzer text-[17px] font-[350] leading-none tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--paragraph-90)];
   }
 }
 
 :root {
   --background: #ffffff;
+  --background-secondary: #fbfbfc;
   --foreground: #171717;
   --border: rgba(0, 1, 17, 0.08);
   --border-hover: rgba(0, 1, 17, 0.16);
+  --paragraph-60: rgba(0, 1, 17, 0.6);
+  --paragraph-90: rgba(0, 1, 17, 0.9);
 }
 
 /* disable dark mode */

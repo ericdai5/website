@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 import ProjectCard from '@/components/ProjectCard';
+import LiveTime from '@/components/LiveTime';
 
 const projects = [
   {
@@ -39,11 +40,17 @@ export default function Home() {
     <div className="w-full">
       <nav className="flex w-full flex-row border-b border-b-[var(--border)] py-5">
         <div className="mx-auto flex w-full max-w-screen-2xl flex-row justify-between px-[60px]">
-          <div className="flex flex-row gap-8">
-            <Button>Eric Dai</Button>
-            <Button>Work</Button>
-            <Button>About</Button>
-            <Button>Contact</Button>
+          <div className="flex flex-row gap-16">
+            <span className="font-switzer text-[22px] font-[400] tracking-[-0.01em]">Eric Dai</span>
+            <div className="flex flex-row gap-8">
+              <Button>Work</Button>
+              <Button>About</Button>
+              <Button>Contact</Button>
+            </div>
+          </div>
+          <div className="hidden flex-row gap-8 lg:flex">
+            <span className="button">New York, NY</span>
+            <LiveTime timezone="America/New_York" />
           </div>
         </div>
       </nav>
@@ -62,7 +69,7 @@ export default function Home() {
         </div>
 
         <section className="w-full py-[40px]">
-          <h2 className="mb-8 text-2xl font-medium">Selected Work</h2>
+          {/* <h2 className="mb-8 text-2xl font-medium">Selected Work</h2> */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <ProjectCard
