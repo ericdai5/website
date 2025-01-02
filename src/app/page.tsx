@@ -1,5 +1,7 @@
+import LiveTime from '@/components/LiveTime';
 import Navigation from '@/components/Navigation';
 import ProjectCard from '@/components/ProjectCard';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -68,7 +70,7 @@ export default function Home() {
           </h3>
         </div>
         <Navigation />
-        <section className="w-full">
+        <section className="mb-[96px] w-full">
           <div className="grid grid-cols-1 gap-x-[16px] gap-y-[96px] sm:grid-cols-2 xl:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard
@@ -84,7 +86,38 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6"></footer>
+      <footer className="mx-auto flex w-full max-w-screen-2xl flex-col justify-between gap-6 border-t border-[var(--border)] px-[24px] pb-24 pt-12 sm:flex-row lg:px-[48px]">
+        <div className="flex w-full flex-col items-start gap-1">
+          <p className="text-[var(--paragraph-60)]">New York, NY</p>
+          <LiveTime />
+        </div>
+        <div className="flex w-full flex-col items-start gap-1">
+          <div className="flex flex-col items-start gap-1">
+            <Link
+              href="https://www.linkedin.com/in/daieric/"
+              className="font-geist text-[18px] font-[350] tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--text-primary)]"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href="https://x.com/ericcdai"
+              className="font-geist text-[18px] font-[350] tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--text-primary)]"
+            >
+              Twitter
+            </Link>
+            <Link
+              href="mailto:ericdai@sas.upenn.edu"
+              className="font-geist text-[18px] font-[350] tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--text-primary)]"
+            >
+              Email
+            </Link>
+          </div>
+        </div>
+        <div className="flex w-full flex-col items-start gap-1">
+          <p className="text-[var(--paragraph-60)]">Copyright © 2024 Eric Dai.</p>
+          <p className="text-[var(--paragraph-60)]">All rights reserved.</p>
+        </div>
+      </footer>
     </>
   );
 }

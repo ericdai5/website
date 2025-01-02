@@ -1,5 +1,4 @@
 import NavItems from './NavItems';
-// import LiveTime from './LiveTime';
 
 export default function Navigation() {
   return (

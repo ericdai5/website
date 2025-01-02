@@ -21,8 +21,9 @@ export default function ProjectCard({
   return (
     <Link href={url}>
       <div className="flex w-full cursor-pointer flex-col gap-6">
+        {/* div around image */}
         <div className="relative w-full overflow-hidden rounded-xl">
-          <div className="group relative w-full overflow-hidden rounded-xl border border-[var(--border)]">
+          <div className="group relative w-full overflow-hidden rounded-xl">
             <Image
               src={imageUrl}
               alt={title}
@@ -41,11 +42,11 @@ export default function ProjectCard({
           <p className="text-[var(--paragraph-60)]">{description}</p>
         </div>
         {/* tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-[6px]">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="font-geist rounded-lg bg-gray-50 px-[10px] py-[6px] text-[12px] font-medium tracking-[-0.01em] text-[var(--paragraph-40)]"
+              className="font-geist rounded-[6px] bg-gray-100 px-[10px] py-[6px] text-[12px] font-[480] tracking-[-0.005em] text-[var(--paragraph-40)]"
             >
               {tag}
             </span>
