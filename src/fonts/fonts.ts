@@ -8,6 +8,11 @@ export const gambetta = localFont({
       style: 'normal',
     },
     {
+      path: './Gambetta-Variable.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
       path: './Gambetta-VariableItalic.woff2',
       weight: '500',
       style: 'italic',
@@ -21,6 +26,11 @@ export const switzer = localFont({
     {
       path: './Switzer-Variable.woff2',
       weight: '350',
+      style: 'normal',
+    },
+    {
+      path: './Switzer-Variable.woff2',
+      weight: '330',
       style: 'normal',
     },
     {

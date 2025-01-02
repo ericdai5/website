@@ -1,30 +1,57 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProjectCardProps {
   title: string;
+  year: string;
   description: string;
   imageUrl: string;
-  //   tags: string[];
+  url: string;
+  tags: string[];
 }
 
-export default function ProjectCard({ title, description, imageUrl }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  year,
+  description,
+  imageUrl,
+  url,
+  tags,
+}: ProjectCardProps) {
   return (
-    <div className="flex w-full flex-col gap-12 rounded-xl border border-[var(--border)] bg-[var(--background-secondary)] p-9 transition-colors hover:border-[var(--border-hover)]">
-      <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-gray-100">
-        <Image src={imageUrl} alt={title} fill className="object-cover" />
-      </div>
-      <div className="flex flex-col gap-2">
-        <h2>{title}</h2>
-        <p className="text-[var(--paragraph-60)]">{description}</p>
-        {/* Potentially add tags here */}
-        {/* <div className="flex flex-wrap gap-2">
+    <Link href={url}>
+      <div className="flex w-full cursor-pointer flex-col gap-6">
+        <div className="relative w-full overflow-hidden rounded-xl">
+          <div className="group relative w-full overflow-hidden rounded-xl border border-[var(--border)]">
+            <Image
+              src={imageUrl}
+              alt={title}
+              width={1080}
+              height={1080}
+              quality={100}
+              className="h-auto w-full transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+        </div>
+        {/* title and description */}
+        <div className="flex flex-col gap-1">
+          <p className="font-[450] text-black">
+            {title}, <span className="font-[350]">{year}</span>
+          </p>
+          <p className="text-[var(--paragraph-60)]">{description}</p>
+        </div>
+        {/* tags */}
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag} className="text-xs px-2 py-1 bg-gray-100 rounded-full">
+            <span
+              key={tag}
+              className="font-geist rounded-lg bg-gray-50 px-[10px] py-[6px] text-[12px] font-medium tracking-[-0.01em] text-[var(--paragraph-40)]"
+            >
               {tag}
             </span>
           ))}
-        </div> */}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         gambetta: ['var(--font-gambetta)'],
         switzer: ['var(--font-switzer)'],
+        geist: ['var(--font-geist)'],
       },
     },
   },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { gambetta, switzer } from '@/fonts/fonts';
+import { GeistSans } from 'geist/font/sans';
 
 export const metadata: Metadata = {
   title: 'Eric Dai',
@@ -14,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${gambetta.variable} ${switzer.variable} antialiased`}>{children}</body>
+    <html
+      lang="en"
+      className={`${gambetta.variable} ${GeistSans.variable} ${switzer.variable} antialiased`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

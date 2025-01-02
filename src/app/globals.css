@@ -7,10 +7,13 @@
     @apply font-gambetta text-[25px] font-medium italic leading-snug tracking-[-0.02em];
   }
   h3 {
-    @apply font-gambetta text-[25px] font-normal leading-snug tracking-[-0.02em];
+    @apply font-geist text-[30px] font-[300] tracking-[-0.01em];
+  }
+  h4 {
+    @apply font-geist text-[22px] font-[350] tracking-[-0.01em];
   }
   p {
-    @apply font-switzer text-[17px] font-[350] tracking-[-0.01em];
+    @apply font-geist text-[18px] font-[350] tracking-[-0.01em];
   }
 }
 
@@ -19,18 +22,22 @@
     @apply font-medium italic;
   }
   .button {
-    @apply font-switzer text-[17px] font-[350] leading-none tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--paragraph-90)];
+    @apply font-switzer text-[22px] font-[350] leading-none tracking-[-0.01em] text-[var(--paragraph-60)] hover:text-[var(--paragraph-90)];
   }
 }
 
 :root {
   --background: #ffffff;
   --background-secondary: #fbfbfc;
+  --background-secondary-hover: #fafafb;
   --foreground: #171717;
-  --border: rgba(0, 1, 17, 0.08);
+  --border: rgba(0, 1, 17, 0.05);
   --border-hover: rgba(0, 1, 17, 0.16);
+  --paragraph-40: rgba(0, 1, 17, 0.4);
   --paragraph-60: rgba(0, 1, 17, 0.6);
   --paragraph-90: rgba(0, 1, 17, 0.9);
+  --text-primary: rgba(0, 1, 17, 0.9);
+  --text-secondary: rgba(0, 1, 17, 0.6);
 }
 
 /* disable dark mode */
