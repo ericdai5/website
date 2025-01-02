@@ -39,14 +39,14 @@ export default function ProjectCard({
           <p className="font-[450] text-black">
             {title}, <span className="font-[350]">{year}</span>
           </p>
-          <p className="text-[var(--paragraph-60)]">{description}</p>
+          <p className="text-[var(--text-60)]">{description}</p>
         </div>
         {/* tags */}
         <div className="flex flex-wrap gap-[6px]">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="font-geist rounded-[6px] bg-gray-100 px-[10px] py-[6px] text-[12px] font-[480] tracking-[-0.005em] text-[var(--paragraph-40)]"
+              className="font-geist rounded-[6px] bg-gray-100 px-[10px] py-[6px] text-[12px] font-[480] tracking-[-0.005em] text-[var(--text-40)]"
             >
               {tag}
             </span>

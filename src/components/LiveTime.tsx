@@ -27,7 +27,7 @@ export default function LiveTime({ timezone = 'America/New_York' }: LiveTimeProp
   }, [timezone]);
 
   return (
-    <span className="font-geist text-[18px] font-[350] tracking-[-0.01em] text-[var(--paragraph-60)]">
+    <span className="font-geist text-[18px] font-[350] tracking-[-0.01em] text-[var(--text-60)]">
       {time}
     </span>
   );
