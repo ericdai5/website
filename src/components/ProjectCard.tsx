@@ -22,8 +22,8 @@ export default function ProjectCard({
     <Link href={url}>
       <div className="flex w-full cursor-pointer flex-col gap-6">
         {/* div around image */}
-        <div className="relative w-full overflow-hidden rounded-xl">
-          <div className="group relative w-full overflow-hidden rounded-xl">
+        <div className="relative w-full overflow-hidden rounded-lg">
+          <div className="group relative w-full overflow-hidden rounded-lg">
             <Image
               src={imageUrl}
               alt={title}

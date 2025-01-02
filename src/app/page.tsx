@@ -70,7 +70,7 @@ export default function Home() {
           </h3>
         </div>
         <Navigation />
-        <section className="mb-[96px] w-full">
+        <section className="bg mb-[96px] w-full">
           <div className="grid grid-cols-1 gap-x-[16px] gap-y-[48px] sm:grid-cols-2 sm:gap-y-[96px] xl:grid-cols-3">
             {projects.map((project) => (
               <ProjectCard
