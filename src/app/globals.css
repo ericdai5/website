@@ -3,13 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  h1 {
+    @apply font-geist text-[36px] font-[450] leading-none tracking-[-0.03em] sm:text-[48px];
+  }
   h2 {
-    @apply font-gambetta text-[25px] font-medium italic leading-snug tracking-[-0.02em];
+    @apply font-geist text-[24px] font-[500] tracking-[-0.01em] sm:text-[28px];
   }
   h3 {
     @apply font-geist text-[26px] font-[300] tracking-[-0.01em] sm:text-[30px];
   }
   h4 {
+    @apply font-geist text-[26px] font-[480] leading-none tracking-[-0.02em] sm:text-[30px];
+  }
+  h5 {
     @apply font-geist text-[18px] font-[350] tracking-[-0.01em] sm:text-[22px];
   }
   p {
