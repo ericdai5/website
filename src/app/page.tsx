@@ -9,7 +9,7 @@ const projects = [
     description: 'A comprehensive design system for enterprise applications',
     imageUrl: '/nori/nori.png',
     url: '/project/nori',
-    tags: ['DESIGN', 'RESEARCH', 'DEVELOPMENT'],
+    tags: ['DESIGN', 'RESEARCH', 'DEV'],
   },
   {
     title: 'Roomadillo',
@@ -17,7 +17,7 @@ const projects = [
     description: 'Simplifying the user booking-experience of a sublease matching platform',
     imageUrl: '/roomadillo/roomadillo.png',
     url: '/project/roomadillo',
-    tags: ['DESIGN', 'DEVELOPMENT'],
+    tags: ['DESIGN', 'DEV'],
   },
   {
     title: 'Konrad',

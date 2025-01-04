@@ -1,10 +1,16 @@
 'use client';
 import Link from 'next/link';
 import LiveTime from './LiveTime';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isProjectPage = pathname.includes('/project');
+
   return (
-    <footer className="mx-auto flex w-full max-w-screen-2xl flex-col justify-between gap-6 border-t border-[var(--border)] px-[24px] pb-24 pt-12 sm:flex-row lg:px-[48px]">
+    <footer
+      className={`mx-auto flex w-full max-w-screen-2xl flex-col justify-between gap-6 border-t border-[var(--border)] px-[24px] pb-24 pt-12 sm:flex-row ${isProjectPage ? 'pt-6' : 'pt-12'} ${isProjectPage ? 'lg:px-6' : 'lg:px-12'}`}
+    >
       <div className="flex w-full flex-col items-start gap-1">
         <p className="text-[var(--text-60)]">New York, NY</p>
         <LiveTime />

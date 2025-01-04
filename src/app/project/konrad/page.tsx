@@ -45,12 +45,12 @@ const projectData: ProjectData = {
     {
       title: 'Digital Load Sheet',
       description:
-        'I was the sole designer behind the digital load sheet feature for the enterprise-facing platform that allowed warehouse workers to receive updates about the location and details of pallets within a shipping trailer as the trailer is being loaded. \n Reach out for additional details.',
+        'I was the sole designer behind the digital load sheet feature for the enterprise-facing platform that allowed warehouse workers to receive updates about the location and details of pallets within a shipping trailer as the trailer is being loaded. Reach out for additional details.',
     },
     {
       title: 'RF Scanner - Trailer Loading',
       description:
-        'I worked closely with three other designers in crafting the experiences of workers using RF (Radio Frequency) Scanners in simplifying the scanning process as well as improving the interface for accessibility. \n Reach out for additional details.',
+        'I worked closely with three other designers in crafting the experiences of workers using RF (Radio Frequency) Scanners in simplifying the scanning process as well as improving the interface for accessibility. Reach out for additional details.',
     },
   ],
 };
