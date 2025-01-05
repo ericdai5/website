@@ -13,6 +13,7 @@ interface ProjectData {
     value: string;
   }[];
   galleryExhibits: {
+    supertext?: string;
     title?: string;
     description?: string;
     images?: { src: string; description?: string }[];
@@ -98,9 +99,10 @@ export default function NexusProject() {
             caseStudy={projectData.caseStudy}
           />
           <section className="flex flex-col">
-            {projectData.galleryExhibits.map((exhibit) => (
+            {projectData.galleryExhibits.map((exhibit, index) => (
               <GalleryExhibit
-                key={exhibit.title}
+                key={`gallery-${index}`}
+                supertext={exhibit.supertext}
                 title={exhibit.title}
                 description={exhibit.description}
                 images={exhibit.images}

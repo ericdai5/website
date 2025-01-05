@@ -22,43 +22,43 @@ interface ProjectData {
 }
 
 const projectData: ProjectData = {
-  name: 'Konrad',
-  cover: '/konrad/konrad-cover.png',
-  category: 'Multimodal Interaction for Warehouse Management',
-  header: 'Digital load sheets for warehouse management',
+  name: 'Roomadillo',
+  cover: '/roomadillo/roomadillo-cover.png',
+  category: 'Student Subletting Platform',
+  header: 'Building for a new short-term housing experience',
   overview:
-    "During the spring of 2023, I worked at Konrad Group as a contract Product Designer working for a Fortune 500 Automotive Parts enterprise. I collaborated with Konrad's Design Director Fredrick Poulsen and three other designers.\nDuring my time there, I designed a digital Load Sheet feature that speeds up the trailer loading process from workers by allowing flexible input from both smart device scanners and desktop. My time at Konrad involved building out, exploring, and pitching ideas to the senior designers and leadership and syncs with the strategy team.",
+    "From February to Aug 2024, I worked at Roomadillo helping to design and develop a new experience for finding student subleases and housing. I worked onsite and closely with the founders Manas and David. \n Additionally, during my time at Roomadillo, I was hands on with helping to grow the on-the-ground operations. I've visited more than 300 apartments over the course of my time there and developed an understanding on the user needs that shaped my design. My time at Roomadillo involved building out the product and refining ideas with the founders.",
   additionalInfo: [
     {
       title: 'Team',
-      value: 'Frederik Poulsen, Peter Braunstein, Felicia Evangeline, Novia Chao, Tanya Yan',
+      value: 'Manas Takalpati, David Hao',
     },
     {
       title: 'Role',
-      value: 'Product Designer',
+      value: 'Product Designer & Software Engineer',
     },
     {
       title: 'Duration',
-      value: 'Jan - Mar 2023',
+      value: 'Feb 2024 - Aug 2024',
     },
   ],
   galleryExhibits: [
     {
       supertext: 'Project 1 🔒',
-      title: 'Digital Load Sheet',
+      title: 'UI Redesign',
       description:
-        'I was the sole designer behind the digital load sheet feature for the enterprise-facing platform that allowed warehouse workers to receive updates about the location and details of pallets within a shipping trailer as the trailer is being loaded. Reach out for additional details.',
+        'I led the UI redesign and engineering for the search, booking, and listing user flows. With the design revamp, I built out a design component system of more than 40 components. Reach out for additional details.',
     },
     {
       supertext: 'Project 2 🔒',
-      title: 'Trailer Loading RF Scanner',
+      title: 'Software Engineering',
       description:
-        'I worked closely with three other designers in crafting the experiences of workers using RF (Radio Frequency) Scanners in simplifying the scanning process as well as improving the interface for accessibility. Reach out for additional details.',
+        '‍I was the sole design and developer behind the booking form, which users need to fill out to send in their initially request for booking an apartment. I implemented the interface with TypeScript and NextJS, as well as creating an Exclusive Access feature using MongoDB, Stripe API, and Zod validation. Reach out for additional details.',
     },
   ],
 };
 
-export default function KonradProject() {
+export default function RoomadilloProject() {
   return (
     <>
       <ProjNav projectData={projectData} />

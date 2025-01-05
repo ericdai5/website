@@ -17,7 +17,7 @@ export default function ProjNav({ projectData }: ProjNavProps) {
         <div className="flex w-full flex-row items-center justify-between gap-16">
           <div className="flex flex-row items-center gap-6">
             <p className="text-[var(--text-90)]">{projectData.name}</p>
-            <p className="text-[var(--text-40)]">{projectData.category}</p>
+            <p className="hidden text-[var(--text-40)] lg:block">{projectData.category}</p>
           </div>
           <Link href="/" className="rounded-md p-2 hover:bg-[var(--hover)]">
             <Image src="/x.svg" alt="Close" width={18} height={18} />
