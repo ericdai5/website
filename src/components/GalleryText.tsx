@@ -8,7 +8,7 @@ interface GalleryTextProps {
 
 export default function GalleryText({ title, description, supertext }: GalleryTextProps) {
   return supertext || title || description ? (
-    <div className="mb-2 mt-8 flex w-full max-w-[980px] flex-col gap-4 md:mb-8 md:mt-16 md:flex-row md:gap-16">
+    <div className="flex w-full max-w-[980px] flex-col gap-4 md:flex-row md:gap-16">
       <div className="flex w-full flex-col gap-4 md:w-1/3">
         {supertext && <p className="text-[var(--text-60)]">{supertext}</p>}
         {title && <h4>{title}</h4>}

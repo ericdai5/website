@@ -77,7 +77,7 @@ const projectData: ProjectData = {
     'https://www.figma.com/proto/N6D3C3wCNcZ6LAYaDlYhWK/Populus?page-id=0%3A1&type=design&node-id=937-5481&viewport=-628%2C-758%2C0.07&t=XblFOhmYm5hwSdrG-1&scaling=contain&starting-point-node-id=937%3A5481&mode=design',
 };
 
-export default function PopulusProject() {
+export default function Project() {
   return (
     <>
       <ProjNav projectData={projectData} />

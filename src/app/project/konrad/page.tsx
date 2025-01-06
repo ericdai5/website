@@ -58,7 +58,7 @@ const projectData: ProjectData = {
   ],
 };
 
-export default function KonradProject() {
+export default function Project() {
   return (
     <>
       <ProjNav projectData={projectData} />

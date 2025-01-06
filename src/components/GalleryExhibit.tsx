@@ -18,16 +18,19 @@ export default function GalleryExhibit({
   images,
 }: GalleryExhibitProps) {
   return (
-    <div className="flex flex-col gap-6 border-t border-[var(--border)] pb-8 md:pb-16">
+    <div className="flex flex-col border-t border-[var(--border)] py-8 md:py-16">
       <GalleryText title={title} description={description} supertext={supertext} />
-      {images &&
-        images.map((image, index) => (
-          <GalleryImage
-            key={`${image.src}-${index}`}
-            src={image.src}
-            description={image.description}
-          />
-        ))}
+      {images && images.length > 0 && (
+        <div className="flex flex-col gap-6 pt-8 md:pt-16">
+          {images.map((image, index) => (
+            <GalleryImage
+              key={`${image.src}-${index}`}
+              src={image.src}
+              description={image.description}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
