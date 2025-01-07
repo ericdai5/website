@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex w-full flex-col items-start gap-1">
-        <p className="text-[var(--text-60)]">Copyright © 2024 Eric Dai.</p>
+        <p className="text-[var(--text-60)]">Copyright © 2025 Eric Dai.</p>
         <p className="text-[var(--text-60)]">All rights reserved.</p>
       </div>
     </footer>

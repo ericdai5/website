@@ -18,7 +18,10 @@ interface ProjectData {
     description?: string;
     images?: { src: string; description?: string }[];
   }[];
-  buttons?: string;
+  buttons?: {
+    text: string;
+    link: string;
+  }[];
 }
 
 const projectData: ProjectData = {
@@ -64,8 +67,12 @@ const projectData: ProjectData = {
         'This is the first project that I have created where I take both the role of designer and developer. My experience in doing this project has been extremely rewarding because I was able to get a good sense of the challenges that are associated with transforming designs into a responsive prototype that is built with code. Working with new front-end technology Astro as well as React was also eye-opening. I learned more about the variety of tools I can incorporate into the site to make the user experience more powerful not just from a design standpoint but also from a feature standpoint.',
     },
   ],
-  buttons:
-    'https://www.figma.com/proto/N6D3C3wCNcZ6LAYaDlYhWK/Populus?page-id=0%3A1&type=design&node-id=937-5481&viewport=-628%2C-758%2C0.07&t=XblFOhmYm5hwSdrG-1&scaling=contain&starting-point-node-id=937%3A5481&mode=design',
+  buttons: [
+    {
+      text: 'View live website',
+      link: 'https://globaldesign.one/en/introduction/',
+    },
+  ],
 };
 
 export default function Project() {

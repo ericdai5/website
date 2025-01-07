@@ -18,7 +18,10 @@ interface ProjectData {
     description?: string;
     images?: { src: string; description?: string }[];
   }[];
-  buttons?: string;
+  buttons?: {
+    text: string;
+    link: string;
+  }[];
 }
 
 const projectData: ProjectData = {

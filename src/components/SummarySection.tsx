@@ -14,7 +14,10 @@ interface SummarySectionProps {
   header: string;
   overview: string;
   additionalInfo: AdditionalInfo[];
-  buttons?: string;
+  buttons?: {
+    text: string;
+    link: string;
+  }[];
 }
 
 export default function SummarySection({
@@ -58,14 +61,19 @@ export default function SummarySection({
               </p>
             ))}
           </div>
-          {/* case study section */}
-          {buttons && (
-            <Link
-              href={buttons}
-              className="mt-6 w-fit rounded-lg bg-gray-100 px-8 py-3 text-[17px] text-[var(--text-60)] hover:bg-gray-200 hover:text-[var(--text-90)]"
-            >
-              View full case study
-            </Link>
+          {/* buttons section */}
+          {buttons && buttons.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-4">
+              {buttons.map((button, index) => (
+                <Link
+                  key={index}
+                  href={button.link}
+                  className="w-fit rounded-lg bg-gray-100 px-8 py-3 text-[17px] text-[var(--text-60)] hover:bg-gray-200 hover:text-[var(--text-90)]"
+                >
+                  {button.text}
+                </Link>
+              ))}
+            </div>
           )}
         </div>
       </div>

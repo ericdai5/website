@@ -1,28 +1,28 @@
 import Navigation from '@/components/Navigation';
 import ProjectCard from '@/components/ProjectCard';
 import Footer from '@/components/Footer';
-
+import Link from 'next/link';
 const projects = [
   {
     title: 'Nori',
     year: '2024',
-    description: 'A comprehensive design system for enterprise applications',
+    description: 'LLM-Powered Authoring Tool',
     imageUrl: '/nori/nori.png',
     url: '/project/nori',
-    tags: ['DESIGN', 'RESEARCH', 'DEV'],
+    tags: ['DESIGN', 'RESEARCH', 'DEVELOPMENT'],
   },
   {
     title: 'Roomadillo',
     year: '2024',
-    description: 'Simplifying the user booking-experience of a sublease matching platform',
+    description: 'Peer-to-peer Housing Marketplace',
     imageUrl: '/roomadillo/roomadillo.png',
     url: '/project/roomadillo',
-    tags: ['DESIGN', 'DEV'],
+    tags: ['DESIGN', 'DEVELOPMENT'],
   },
   {
     title: 'Konrad',
     year: '2023',
-    description: 'Multimodal warehouse management system for a Fortune 500 enterprise',
+    description: 'Multimodal Warehouse Management System',
     imageUrl: '/konrad/konrad.png',
     url: '/project/konrad',
     tags: ['DESIGN'],
@@ -30,7 +30,7 @@ const projects = [
   {
     title: 'Populus',
     year: '2022',
-    description: 'Prototyping a tool that makes voting preparation simple and easy',
+    description: 'Voter Preparation Mobile App',
     imageUrl: '/populus/populus.png',
     url: '/project/populus',
     tags: ['DESIGN'],
@@ -38,15 +38,15 @@ const projects = [
   {
     title: 'Global Design',
     year: '2022',
-    description: 'Coding an education site on internationalization and localization in design',
+    description: 'Design Guidelines for i18n and Localization',
     imageUrl: '/globaldesign/globaldesign.png',
     url: '/project/globaldesign',
-    tags: ['DESIGN'],
+    tags: ['DESIGN', 'DEVELOPMENT'],
   },
   {
     title: 'Nexus',
     year: '2021',
-    description: 'Reimagining the Penn course registration experience',
+    description: 'Course Registration Platform',
     imageUrl: '/nexus/nexus.png',
     url: '/project/nexus',
     tags: ['DESIGN'],
@@ -64,8 +64,14 @@ export default function Home() {
             a candidate for MSE in Computer Science at Penn.
           </h3>
           <h3 className="text-[var(--text-60)]">
-            I help others design and build UI under my studio Ren. Previously, I prototyped software
-            at Konrad Group, and devised strategy at Adobe.
+            I help others design and build UI under my studio{' '}
+            <Link
+              href="https://www.renlabs.xyz/"
+              className="text-[var(--text-40)] underline decoration-gray-200 decoration-2 underline-offset-4 hover:text-[var(--text-90)]"
+            >
+              Ren
+            </Link>
+            . Previously, I prototyped software at Konrad Group, and devised strategy at Adobe.
           </h3>
         </div>
         <Navigation />

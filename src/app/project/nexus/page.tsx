@@ -18,7 +18,10 @@ interface ProjectData {
     description?: string;
     images?: { src: string; description?: string }[];
   }[];
-  buttons?: string;
+  buttons?: {
+    text: string;
+    link: string;
+  }[];
 }
 
 const projectData: ProjectData = {
@@ -81,8 +84,12 @@ const projectData: ProjectData = {
       ],
     },
   ],
-  buttons:
-    'https://www.figma.com/proto/cZcHPGYN9snmfMAOWbEXjZ/Nexus?page-id=334%3A715&type=design&node-id=367-7935&viewport=8%2C544%2C0.05&t=LFwteZASH2yGXgoh-1&scaling=scale-down&starting-point-node-id=367%3A7935&mode=design',
+  buttons: [
+    {
+      text: 'View full case study',
+      link: 'https://www.figma.com/proto/cZcHPGYN9snmfMAOWbEXjZ/Nexus?page-id=334%3A715&node-id=367-7935&viewport=51%2C439%2C0.05&t=WrWqVNmm47xMSzUk-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=367%3A7935',
+    },
+  ],
 };
 
 export default function Project() {
