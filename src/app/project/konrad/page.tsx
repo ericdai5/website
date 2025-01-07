@@ -18,7 +18,7 @@ interface ProjectData {
     description?: string;
     images?: { src: string; description?: string }[];
   }[];
-  caseStudy?: string;
+  buttons?: string;
 }
 
 const projectData: ProjectData = {
@@ -69,7 +69,7 @@ export default function Project() {
             header={projectData.header}
             overview={projectData.overview}
             additionalInfo={projectData.additionalInfo}
-            caseStudy={projectData.caseStudy}
+            buttons={projectData.buttons}
           />
           <section className="flex flex-col">
             {projectData.galleryExhibits.map((exhibit, index) => (

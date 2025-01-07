@@ -14,7 +14,7 @@ interface SummarySectionProps {
   header: string;
   overview: string;
   additionalInfo: AdditionalInfo[];
-  caseStudy?: string;
+  buttons?: string;
 }
 
 export default function SummarySection({
@@ -22,7 +22,7 @@ export default function SummarySection({
   header,
   overview,
   additionalInfo,
-  caseStudy,
+  buttons,
 }: SummarySectionProps) {
   return (
     <div className="flex flex-col gap-8 md:gap-16">
@@ -59,9 +59,9 @@ export default function SummarySection({
             ))}
           </div>
           {/* case study section */}
-          {caseStudy && (
+          {buttons && (
             <Link
-              href={caseStudy}
+              href={buttons}
               className="mt-6 w-fit rounded-lg bg-gray-100 px-8 py-3 text-[17px] text-[var(--text-60)] hover:bg-gray-200 hover:text-[var(--text-90)]"
             >
               View full case study

@@ -18,7 +18,7 @@ interface ProjectData {
     description?: string;
     images?: { src: string; description?: string }[];
   }[];
-  caseStudy?: string;
+  buttons?: string;
 }
 
 const projectData: ProjectData = {
@@ -81,7 +81,7 @@ const projectData: ProjectData = {
       ],
     },
   ],
-  caseStudy:
+  buttons:
     'https://www.figma.com/proto/cZcHPGYN9snmfMAOWbEXjZ/Nexus?page-id=334%3A715&type=design&node-id=367-7935&viewport=8%2C544%2C0.05&t=LFwteZASH2yGXgoh-1&scaling=scale-down&starting-point-node-id=367%3A7935&mode=design',
 };
 
@@ -96,7 +96,7 @@ export default function Project() {
             header={projectData.header}
             overview={projectData.overview}
             additionalInfo={projectData.additionalInfo}
-            caseStudy={projectData.caseStudy}
+            buttons={projectData.buttons}
           />
           <section className="flex flex-col">
             {projectData.galleryExhibits.map((exhibit, index) => (
