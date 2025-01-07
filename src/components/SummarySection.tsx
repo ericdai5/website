@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Divider from './Divider';
+import { parseMarkdownLinks } from '@/utils/parseMarkdownLinks';
 
 interface AdditionalInfo {
   title: string;
@@ -44,7 +45,7 @@ export default function SummarySection({
           {additionalInfo.map((info) => (
             <div className="flex flex-col gap-2" key={info.title}>
               <p className="text-[17px] text-[var(--text-40)]">{info.title}</p>
-              <p className="text-[17px]">{info.value}</p>
+              <p className="text-[17px]">{parseMarkdownLinks(info.value)}</p>
             </div>
           ))}
         </div>
@@ -53,7 +54,7 @@ export default function SummarySection({
           <div className="flex flex-col gap-4">
             {overview.split('\n').map((paragraph, index) => (
               <p key={index} className="text-[17px]">
-                {paragraph}
+                {parseMarkdownLinks(paragraph)}
               </p>
             ))}
           </div>

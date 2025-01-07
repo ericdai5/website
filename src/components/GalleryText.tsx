@@ -1,4 +1,5 @@
 import React from 'react';
+import { parseMarkdownLinks } from '@/utils/parseMarkdownLinks';
 
 interface GalleryTextProps {
   title?: string;
@@ -17,13 +18,13 @@ export default function GalleryText({ title, description, supertext }: GalleryTe
         <div className="flex w-full flex-col gap-4 md:w-2/3">
           {description.split('\n').map((paragraph, index) => (
             <p key={index} className="text-[17px]">
-              {paragraph}
+              {parseMarkdownLinks(paragraph)}
             </p>
           ))}
         </div>
       )}
     </div>
   ) : (
-    <div className="h-12" />
+    <div className="-mt-8 flex h-0 md:-mt-16" />
   );
 }

@@ -19,9 +19,9 @@ export default function ProjectCard({
   tags,
 }: ProjectCardProps) {
   return (
-    <Link href={url}>
-      <div className="flex w-full cursor-pointer flex-col gap-6">
-        {/* div around image */}
+    <div className="flex w-full flex-col gap-6">
+      {/* div around image */}
+      <Link href={url}>
         <div className="relative w-full overflow-hidden rounded-lg">
           <div className="group relative w-full overflow-hidden rounded-lg">
             <Image
@@ -34,25 +34,25 @@ export default function ProjectCard({
             />
           </div>
         </div>
-        {/* title and description */}
-        <div className="flex flex-col gap-1">
-          <p className="font-[450] text-black">
-            {title}, <span className="font-[350]">{year}</span>
-          </p>
-          <p className="text-[var(--text-60)]">{description}</p>
-        </div>
-        {/* tags */}
-        <div className="flex flex-wrap gap-[6px]">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="font-geist rounded-[6px] bg-gray-100 px-[10px] py-[6px] text-[12px] font-[480] tracking-[-0.005em] text-[var(--text-40)]"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+      </Link>
+      {/* title and description */}
+      <div className="flex flex-col gap-1">
+        <p className="font-[450] text-black">
+          {title}, <span className="font-[350]">{year}</span>
+        </p>
+        <p className="text-[var(--text-60)]">{description}</p>
       </div>
-    </Link>
+      {/* tags */}
+      <div className="flex flex-wrap gap-[6px]">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-[6px] bg-gray-100 px-[10px] py-[6px] font-geist text-[12px] font-[480] tracking-[-0.005em] text-[var(--text-40)]"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }

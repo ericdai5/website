@@ -51,7 +51,7 @@ const projectData: ProjectData = {
     {
       title: 'Role of this project',
       description:
-        "I hope that this website provides people with ideas on how to incorporate cross-cultural design-thinking into their existing design processes and steps such as user research. On this website, I have provided various links to other resources that are related to international design such as Google's font support resources as well as international research findings through Nielson Norman Group.",
+        "I hope that this website provides people with ideas on how to incorporate cross-cultural design-thinking into their existing design processes and steps such as user research. On this website, I have provided various links to other resources that are related to international design such as Google's [font support resources](https://fonts.google.com/knowledge/using_type/language_support_in_fonts) as well as international research findings through [Nielson Norman Group](https://www.nngroup.com/).",
     },
     {
       title: 'Current State',
