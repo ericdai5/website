@@ -33,11 +33,6 @@ const projectData: ProjectData = {
         'This project involves a deep dive on using OpenAI APIs to aid in generating text-table linkages with fewer inaccuracies and more human-like contextual understanding. Upon the completion of a minimal viable product, I conducted a user study with six participants that indicated users find Nori helpful for understanding references due to its intuitive interface and effective visual cues. However, participants also identified limitations regarding the speed and accuracy of the LLM generated highlights, especially for complex references.',
     },
     {
-      title: 'Current State',
-      description:
-        'As of October 2022, the website you see is a simple prototype. I have implemented some initial information sections - Introduction, User Research, Language, Culture - with light content. I have also implemented an i18n Language translation feature where you can choose to read the site from available languages. I will continue to build and improve the site as I gain more technical knowledge as well as conduct more research on design methods.',
-    },
-    {
       title: 'Next Steps',
       description:
         'I am still exploring ways to improve upon the existing system. Future work will focus on enhancing system efficiency and speed, expanding support for diverse table formats and content types—including LaTeX—and refining the LLM’s ability to produce more accurate and contextually relevant annotations. Take a look at my presentation to step through a summary of the project and its features.',
