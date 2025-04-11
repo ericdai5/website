@@ -23,7 +23,7 @@ export default function Contact() {
           </Link>
         </div>
         <div className="flex flex-col border-t border-[var(--border)] px-6 py-6 hover:bg-gray-100">
-          <Link href="https://github.com/ericdai" className="text-[17px]">
+          <Link href="https://github.com/ericdai5" className="text-[17px]">
             GitHub
           </Link>
         </div>
